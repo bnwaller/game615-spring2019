@@ -357,7 +357,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414431085}
   m_LocalRotation: {x: -0, y: 0.20268749, z: -0, w: 0.9792435}
-  m_LocalPosition: {x: -2.29, y: 1.55, z: -0}
+  m_LocalPosition: {x: -2.62, y: 1.517, z: -0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -413,7 +413,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 26
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -438,13 +438,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: -0.00085967296, y: 0.0015417644, z: -0.042076323, w: 0.99911284}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.027306937, y: -0.009874292, z: 0.00021933974, w: 0.99957836}
+  m_LocalPosition: {x: 0.5933422, y: 2.1880467, z: -24.043724}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.091000006, y: 0.18100001, z: -4.8230004}
+  m_LocalEulerAnglesHint: {x: -0.091000006, y: 0.18100001, z: 0}
 --- !u!1 &920138588
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,7 +530,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920138588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3, y: 0.52, z: 0}
+  m_LocalPosition: {x: -2.65, y: 0.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -548,6 +548,8 @@ GameObject:
   - component: {fileID: 1224832104}
   - component: {fileID: 1224832103}
   - component: {fileID: 1224832102}
+  - component: {fileID: 1224832107}
+  - component: {fileID: 1224832106}
   m_Layer: 0
   m_Name: Big sphere
   m_TagString: Untagged
@@ -627,6 +629,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1224832106
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224832101}
+  serializedVersion: 2
+  m_Mass: 40
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1224832107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224832101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44fcd7648a1aa410483034e9370de7e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1425240079
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,6 +669,7 @@ GameObject:
   - component: {fileID: 1425240082}
   - component: {fileID: 1425240081}
   - component: {fileID: 1425240080}
+  - component: {fileID: 1425240084}
   m_Layer: 0
   m_Name: Small sphere
   m_TagString: Untagged
@@ -718,6 +749,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1425240084
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425240079}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1574500447
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,6 +960,7 @@ GameObject:
   - component: {fileID: 1800457743}
   - component: {fileID: 1800457742}
   - component: {fileID: 1800457741}
+  - component: {fileID: 1800457745}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -992,6 +1040,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -1.733, y: -0.66, z: -28.888}
+--- !u!54 &1800457745
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800457740}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2023465905
 GameObject:
   m_ObjectHideFlags: 0
