@@ -16648,7 +16648,7 @@ GameObject:
   - component: {fileID: 1222540360}
   - component: {fileID: 1222540361}
   m_Layer: 0
-  m_Name: Model (Car)
+  m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16695,9 +16695,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1222540358}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff79029754fb34d72ad9aef630e7b5d9, type: 3}
+  m_Script: {fileID: 11500000, guid: 68f388397fa70416c83f545346231e29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 100
 --- !u!1 &1234746687
 GameObject:
   m_ObjectHideFlags: 0
@@ -20054,7 +20055,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528816937}
   m_LocalRotation: {x: -0.000000059476484, y: -0.9999977, z: -0.000000059573768, w: 0.0021503256}
-  m_LocalPosition: {x: -5.18, y: -1.4299778, z: 3.2}
+  m_LocalPosition: {x: -5.18, y: -1.58, z: 3.2}
   m_LocalScale: {x: 0.22491995, y: 1, z: 12.9978485}
   m_Children: []
   m_Father: {fileID: 1200527789}
@@ -22492,7 +22493,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725143284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.49, y: 0.6, z: -0.01}
+  m_LocalPosition: {x: -9.49, y: 0.49, z: -0.01}
   m_LocalScale: {x: 0.22492, y: 1, z: 18.609001}
   m_Children: []
   m_Father: {fileID: 0}
@@ -24312,7 +24313,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868882052}
   m_LocalRotation: {x: -0, y: -0.7065286, z: -0, w: 0.70768446}
-  m_LocalPosition: {x: -1.98, y: -1.4299778, z: 7.72}
+  m_LocalPosition: {x: -1.98, y: -1.57, z: 7.72}
   m_LocalScale: {x: 0.22491995, y: 1, z: 6.3867173}
   m_Children: []
   m_Father: {fileID: 1200527789}
