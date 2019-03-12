@@ -1,22 +1,26 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections; 
 
-public class PlanePilot : MonoBehaviour {
+public class PlanePilot : MonoBehaviour 
+{
     public float speed = 90.0f;
 
     // Start is called before the first frame update
-    void Start() {
-        Debug.Log("plane pilot script added to: " + gameObject.name);
+    void Start()
+    {
 
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update() 
+    {
         transform.position += transform.forward * Time.deltaTime * speed;
 
         speed -= transform.forward.y * Time.deltaTime * 50.0f;
 
-        if(speed < 35.0f) {
+        if(speed < 35.0f) 
+        {
             speed = 35.0f;
         }
 
@@ -24,7 +28,8 @@ public class PlanePilot : MonoBehaviour {
 
         float terrainHeightWhereWeAre = Terrain.activeTerrain.SampleHeight( transform.position );
 
-        if(terrainHeightWhereWeAre > transform.position.y) {
+        if(terrainHeightWhereWeAre > transform.position.y) 
+        {
             transform.position = new Vector3(transform.position.x,
                                               terrainHeightWhereWeAre,
                                               transform.position.z);

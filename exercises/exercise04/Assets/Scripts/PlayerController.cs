@@ -2,24 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
+    float moveSpeed = 5f;
+    float rotateSpeed = 70f;
 
-    public float speed;
 
-    private Rigidbody rb;
+    CharacterController cc;
 
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        cc = gameObject.GetComponent<CharacterController>();
     }
 
-    void FixedUpdate ()
+    // Update is called once per frame
+    void Update()
     {
-        float moveHorizontal = Input.GetAxis ("Horizontal");
-        float moveVertical = Input.GetAxis ("Vertical");
+        float hAxis = Input.GetAxis("Horizontal");
+        float vAxis = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+        transform.Rotate(0, hAxis * rotateSpeed * Time.deltaTime, 0);
 
-        rb.AddForce (movement * speed);  
+        cc.Move(transform.forward * vAxis * moveSpeed * Time.deltaTime); 
     }
 }
+
