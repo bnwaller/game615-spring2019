@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 181625685412462127}
+  - component: {fileID: 290497450024857605}
   m_Layer: 0
   m_Name: Pick Up (3)
   m_TagString: Pick Up
@@ -31,6 +32,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &290497450024857605
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7635312090772763576}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.4646955, y: 1.4376497, z: 5.2836623}
+  m_Center: {x: -0.17556214, y: 0.6992965, z: 0.29298902}
 --- !u!1001 &5821081922433947577
 PrefabInstance:
   m_ObjectHideFlags: 0
