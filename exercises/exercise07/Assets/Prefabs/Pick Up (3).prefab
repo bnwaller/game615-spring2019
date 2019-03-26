@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 181625685412462127}
   m_Layer: 0
-  m_Name: Pie
-  m_TagString: Untagged
+  m_Name: Pick Up (3)
+  m_TagString: Pick Up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
