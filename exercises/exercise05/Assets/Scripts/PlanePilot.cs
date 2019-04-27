@@ -14,7 +14,8 @@ public class PlanePilot : MonoBehaviour
 
     // Update is called once per frame
     void Update() 
-    {
+    { 
+        if(Input.GetKey(KeyCode.Space))
         transform.position += transform.forward * Time.deltaTime * speed;
 
         speed -= transform.forward.y * Time.deltaTime * 50.0f;
@@ -24,7 +25,7 @@ public class PlanePilot : MonoBehaviour
             speed = 35.0f;
         }
 
-        transform.Rotate( Input.GetAxis("Vertical"), 0.0f, Input.GetAxis("Horizontal"));
+        transform.Rotate( Input.GetAxis("Vertical"), 0.0f, -Input.GetAxis("Horizontal"));
 
         float terrainHeightWhereWeAre = Terrain.activeTerrain.SampleHeight( transform.position );
 

@@ -4,27 +4,30 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    float moveSpeed = 5f;
-    float rotateSpeed = 70f;
-
-
-    CharacterController cc;
-
-    // Start is called before the first frame update
-    void Start()
+    void Start ()
     {
-        cc = gameObject.GetComponent<CharacterController>();
+       
     }
 
-    // Update is called once per frame
     void Update()
     {
-        float hAxis = Input.GetAxis("Horizontal");
-        float vAxis = Input.GetAxis("Vertical");
+        if (Input.GetKey("up"))
+        {
+            transform.Translate(0, 0, .05f);
+        }
+        if (Input.GetKey("down"))
+        {
+            transform.Translate(0, 0, -.05f);
+        }
+        if (Input.GetKey("left"))
+        {
+            transform.Rotate(0, -5f, 0);
+        }
+        if (Input.GetKey("right"))
+        {
+            transform.Rotate(0, 5f, 0);
+        }
 
-        transform.Rotate(0, hAxis * rotateSpeed * Time.deltaTime, 0);
-
-        cc.Move(transform.forward * vAxis * moveSpeed * Time.deltaTime); 
     }
-}
 
+}
