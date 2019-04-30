@@ -21,8 +21,7 @@ public class LaunchScript : MonoBehaviour
     {
         if (controller.isGrounded)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-                moveDirection.y = jumpSpeed;
+            if (Input.GetKeyDown(KeyCode.Space))           
         }
     }
 }
