@@ -10,7 +10,7 @@ public class RingScript : MonoBehaviour
     //we change directions
     float moveTimer;
     //This will be how fast we move the ring each Update
-    float moveSpeed = 0.05f;
+    float moveSpeed = .05f;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +36,6 @@ public class RingScript : MonoBehaviour
         }
 
         //Move the transform of the gameObject using the "Translate" function
-        transform.Translate(moveSpeed, 0, 0);
+        transform.Translate(0, 0, moveSpeed);
     }
 }

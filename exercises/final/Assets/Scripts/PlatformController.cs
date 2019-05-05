@@ -13,6 +13,7 @@ public class PlatformController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Input.GetAxis("Vertical"), 0, -Input.GetAxis("Horizontal"));
+        transform.Rotate(-Input.GetAxis("Vertical") * 2, 0, 0);
+        transform.Rotate(0, 0, Input.GetAxis("Horizontal") * 2);
     }
 }

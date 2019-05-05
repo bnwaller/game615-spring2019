@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Spawn
+  - Pick Up
+  - Goal
+  - Target
+  - Ball
   layers:
   - Default
   - TransparentFX
