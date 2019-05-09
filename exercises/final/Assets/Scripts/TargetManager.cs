@@ -5,33 +5,15 @@ using UnityEngine.UI;
 
 public class TargetManager : MonoBehaviour
 {
-    public Text scoreText;
-    public Text winText;
-    private int score;
-
-    private void Start()
-    {
-        score = 0;
-        SetScoreText();
-        winText.text = "";
-    }
-
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Ball"))
+        if (other.gameObject.tag == "Player")
         {
             other.gameObject.SetActive(false);
-            score = score + 1;
-            SetScoreText();
-        }
-    }
-    void SetScoreText()
-    {
-        scoreText.text = "Score:" + score.ToString();
-        if (score >= 1)
-        {
-            winText.text = "You Win";
-        }
+            GameObject gmobj = GameObject.Find("GameManager");
+            GameManagerScript gm = gmobj.GetComponent<GameManagerScript>();
+            gm.incrementscore();
+        }        
     }
 }
 

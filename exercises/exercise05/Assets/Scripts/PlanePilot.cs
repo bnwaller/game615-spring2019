@@ -15,10 +15,10 @@ public class PlanePilot : MonoBehaviour
     // Update is called once per frame
     void Update() 
     { 
-        if(Input.GetKey(KeyCode.Space))
+       
         transform.position += transform.forward * Time.deltaTime * speed;
 
-        speed -= transform.forward.y * Time.deltaTime * 50.0f;
+        speed -= transform.forward.y * Time.deltaTime * 40.0f;
 
         if(speed < 35.0f) 
         {
