@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GameManagerScript : MonoBehaviour {
 
     public Text scoretext;
+    public Text winText;
     private int score;
 
 	// Use this for initialization
@@ -13,6 +14,7 @@ public class GameManagerScript : MonoBehaviour {
 
         score = 0;
         scoretext.text = score.ToString();
+        winText.text = "";
     }
 	
 	// Update is called once per frame
@@ -23,5 +25,9 @@ public class GameManagerScript : MonoBehaviour {
     public void incrementscore (){
         score = score +1;
         scoretext.text = score.ToString();
+        if (score >= 1)
+        {
+            winText.text = "You Win!!!";
+        }
     }
 }
